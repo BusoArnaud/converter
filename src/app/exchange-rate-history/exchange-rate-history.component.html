@@ -1,0 +1,30 @@
+<h1>History</h1>
+
+<table mat-table [dataSource]="exchangeRateHistoryService.exchangeRateHistory$ | async" class="mat-elevation-z8">
+  <!-- Real Rate -->
+  <ng-container matColumnDef="rate">
+    <th mat-header-cell *matHeaderCellDef>Rate</th>
+    <td mat-cell *matCellDef="let element">{{ element.rate }}</td>
+  </ng-container>
+
+  <!-- Forced Rate -->
+  <ng-container matColumnDef="forcedRate">
+    <th mat-header-cell *matHeaderCellDef>Forced Rate</th>
+    <td mat-cell *matCellDef="let element">{{ element.forcedRate }}</td>
+  </ng-container>
+
+  <!-- Initial Value -->
+  <ng-container matColumnDef="initialValue">
+    <th mat-header-cell *matHeaderCellDef>Initial Value</th>
+    <td mat-cell *matCellDef="let element">{{ element.initialValue }}</td>
+  </ng-container>
+
+  <!-- Calculated Value -->
+  <ng-container matColumnDef="calculatedValue">
+    <th mat-header-cell *matHeaderCellDef>Calculated Value</th>
+    <td mat-cell *matCellDef="let element">{{ element.calculatedValue }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

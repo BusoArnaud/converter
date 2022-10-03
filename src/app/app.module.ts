@@ -8,16 +8,20 @@ import { AppComponent } from './app.component';
 import { ExchangeRateDisplayComponent } from './exchange-rate-display/exchange-rate-display.component';
 import { ExchangeRateConverterComponent } from './exchange-rate-converter/exchange-rate-converter.component';
 import { ExchangeRateConverterPipe } from "./exchange-rate-converter/exchange-rate-converter.pipe";
+import { ExchangeRateHistoryComponent } from './exchange-rate-history/exchange-rate-history.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ExchangeRateDisplayComponent,
     ExchangeRateConverterComponent,
-    ExchangeRateConverterPipe
+    ExchangeRateConverterPipe,
+    ExchangeRateHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     FormsModule,
     MatInputModule,
     MatSlideToggleModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
