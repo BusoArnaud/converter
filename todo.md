@@ -6,3 +6,4 @@
 - J'ai également forcé l'affichage sur 2 digits après la virgule (sauf dans l'input)
 - Lorsque l'on utilise le switch sans valeur, il est automatiquement remplacé par un 0 dans l'input ce qui trigger le pipe et l'historique, il faut donc repenser cette partie.
 - Concernant le tableau, j'ai rencontré des soucis de type avec le `dataSource` du `mat-table` en utilsant le pipe `async`, j'ai donc fait au mieux pour le test, mais cela demande un approffondissement.
+- Configuration uniquement pour EUR/USD, il faut la généraliser à terme.
