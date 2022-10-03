@@ -1,15 +1,20 @@
 <h1>Converter</h1>
 
 <section>
+  <mat-slide-toggle [(ngModel)]="isDollar" (change)="switch(result)">Switch to dollar</mat-slide-toggle>
+</section>
+
+<section>
   <mat-form-field appearance="fill" floatLabel="always">
     <mat-label>Amount</mat-label>
     <input matInput class="amount" type="number" [(ngModel)]="amount" />
-    <span matPrefix>€&nbsp;</span>
+    <span matPrefix>{{ isDollar ? '$' : '€' }}&nbsp;</span>
   </mat-form-field>
 </section>
 
 <section>
-  <p>
-    {{amount | exchangeRateConverter: (exchangeRateService.exchangeRate$ | async)| currency: 'USD'}}
+  <p #result>
+    {{amount | exchangeRateConverter: (exchangeRateService.exchangeRate$ | async):isDollar
+    | currency: (isDollar ? 'EUR' : 'USD')}}
   </p>
 </section>

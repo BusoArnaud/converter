@@ -8,10 +8,16 @@ import {ExchangeRateService} from "../exchange-rate-display/exchange-rate.servic
 })
 export class ExchangeRateConverterComponent {
 
-  public amount: number = 0;
+  public amount: any;
+  public isDollar: boolean = false;
+  public result: any;
 
   constructor(
     public exchangeRateService: ExchangeRateService
   ) { }
+
+  switch(r: any): void {
+    this.amount = +r.innerHTML.trim().slice(1);
+  }
 
 }

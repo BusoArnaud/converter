@@ -10,7 +10,7 @@ import { ExchangeRateConverterComponent } from './exchange-rate-converter/exchan
 import { ExchangeRateConverterPipe } from "./exchange-rate-converter/exchange-rate-converter.pipe";
 
 import { MatInputModule } from '@angular/material/input';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
