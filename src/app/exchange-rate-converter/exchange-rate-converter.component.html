@@ -1,0 +1,15 @@
+<h1>Converter</h1>
+
+<section>
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>Amount</mat-label>
+    <input matInput class="amount" type="number" [(ngModel)]="amount" />
+    <span matPrefix>€&nbsp;</span>
+  </mat-form-field>
+</section>
+
+<section>
+  <p>
+    {{amount | exchangeRateConverter: (exchangeRateService.exchangeRate$ | async)| currency: 'USD'}}
+  </p>
+</section>
