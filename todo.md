@@ -6,5 +6,3 @@
 - J'ai également forcé l'affichage sur 2 digits après la virgule (sauf dans l'input)
 - Lorsque l'on utilise le switch sans valeur, il est automatiquement remplacé par un 0 dans l'input ce qui trigger le pipe et l'historique, il faut donc repenser cette partie.
 - Concernant le tableau, j'ai rencontré des soucis de type avec le `dataSource` du `mat-table` en utilsant le pipe `async`, j'ai donc fait au mieux pour le test, mais cela demande un approffondissement.
-- Je n'ai eu le temps de faire les point 6-7, j'ai priorisé le point 8, je trouvais cela plus pertinent de vous présenter mon travail sur ce point.
-- Concernant les points 6-7, j'aurais ajouté un input à l'utilisateur comme `amount`, ainsi qu'un paramètre au niveau de mon pipe pour que ce dernier gère l'utilisation du taux forcé et également car dans l'implémentation actuelle c'est lui le donneur d'ordre pour la mise à jour de l'historique, il possède déjà l'ensemble des données.

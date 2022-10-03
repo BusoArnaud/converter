@@ -10,6 +10,7 @@ import {ExchangeRateService} from "../exchange-rate-display/exchange-rate.servic
 export class ExchangeRateConverterComponent {
 
   public amount: any;
+  public forcedRate: any;
   public isDollar: boolean = false;
   public result: any;
 

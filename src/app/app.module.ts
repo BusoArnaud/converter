@@ -13,6 +13,7 @@ import { ExchangeRateHistoryComponent } from './exchange-rate-history/exchange-r
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
+import { ForceRateUsagePipe } from "./exchange-rate-converter/force-rate-usage.pipe";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatTableModule } from '@angular/material/table';
     ExchangeRateDisplayComponent,
     ExchangeRateConverterComponent,
     ExchangeRateConverterPipe,
-    ExchangeRateHistoryComponent
+    ExchangeRateHistoryComponent,
+    ForceRateUsagePipe,
   ],
   imports: [
     BrowserModule,

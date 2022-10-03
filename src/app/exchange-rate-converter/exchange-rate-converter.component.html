@@ -16,10 +16,21 @@
 
   <section class="result">
     <p #result>
-      {{amount | exchangeRateConverter: (exchangeRateService.exchangeRate$ | async):isDollar
+      {{amount | exchangeRateConverter: (exchangeRateService.exchangeRate$ | async):isDollar:forcedRate
       | currency: (isDollar ? 'EUR' : 'USD')}}
     </p>
   </section>
 </div>
 
+<div>
+  <section>
+    <mat-form-field floatLabel="always">
+      <mat-label>Forced Rate</mat-label>
+      <input matInput class="forcedRate" type="number" [(ngModel)]="forcedRate" />
+    </mat-form-field>
+  </section>
+  <section>
+    <p>{{ (exchangeRateService.exchangeRate$ | async) | forceRateUsage: forcedRate}}</p>
+  </section>
+</div>
 
