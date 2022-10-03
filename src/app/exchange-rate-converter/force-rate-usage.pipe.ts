@@ -11,7 +11,6 @@ export class ForceRateUsagePipe implements PipeTransform {
       return '';
     }
 
-    console.log(forcedRate);
     if (forcedRate <= 0) {
       return 'Forced rate must be > 0.'
     }
