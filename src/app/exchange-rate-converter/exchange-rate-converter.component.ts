@@ -18,7 +18,7 @@ export class ExchangeRateConverterComponent {
   ) { }
 
   switch(r: any): void {
-    this.amount = +r.innerHTML.trim().slice(1);
+    this.amount = parseFloat(r.innerHTML.trim().slice(1).replaceAll(',',''));
   }
 
 }
