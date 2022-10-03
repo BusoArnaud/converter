@@ -5,6 +5,7 @@ import {ExchangeRateService} from "../exchange-rate-display/exchange-rate.servic
   selector: 'app-exchange-rate-converter',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './exchange-rate-converter.component.html',
+  styleUrls: ['./exchange-rate-converter.component.sass']
 })
 export class ExchangeRateConverterComponent {
 
