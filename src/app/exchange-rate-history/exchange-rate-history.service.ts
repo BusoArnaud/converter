@@ -10,7 +10,7 @@ export class ExchangeRateHistoryService {
   private exchangeRateHistory: CdkTableDataSourceInput<any> = []
 
   public exchangeRateHistory$: BehaviorSubject<any>;
-  public exchangeRateHistoryUpdate$: Subject<any>
+  public exchangeRateHistoryUpdate$: Subject<any>;
 
   constructor() {
     this.exchangeRateHistory$ = new BehaviorSubject<any>(this.exchangeRateHistory);
